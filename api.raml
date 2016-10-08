@@ -1,0 +1,17 @@
+#%RAML 1.0
+title: filterize.net
+version: v1
+baseUri: https://app.filterize.net/api
+
+securedBy: [oauth_2_0]
+
+securitySchemes:
+  oauth_2_0: !include securitySchemes/oauth_2_0.raml
+
+
+/user:
+  displayName: Users
+  /{user_id}:
+    displayName: A specific user
+    get:
+      description: Get information about the user object.
