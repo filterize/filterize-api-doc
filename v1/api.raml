@@ -2,6 +2,7 @@
 title: filterize.net
 version: v1
 baseUri: https://api.filterize.net/v1
+mediaType: application/json
 
 securitySchemes:
   oauth_2_0: !include securitySchemes/oauth_2_0.raml
@@ -43,6 +44,21 @@ types:
             post:
               body:
                 application/json:
+    /filters:
+      get:
+      post:
+        body:
+          application/json:
+      /{guid}:
+        get:
+        put:
+          body:
+            application/json:
+    /tags:
+      get:
+      post:
+        body:
+          application/json:
 
 /user:
   get:
